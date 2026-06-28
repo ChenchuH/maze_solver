@@ -1,5 +1,15 @@
 import random
 
+GREEN = "\033[32m"
+RESET = "\033[0m"
+ 
+SYMBOLS = {
+    "#": "[]",
+    " ": "  ",
+    "S": "  ",
+    "E": "  ",
+}
+
 def generate_maze(size):
     if size % 2 == 0:
         size += 1
@@ -43,22 +53,21 @@ def generate_maze(size):
     maze[1][1] = "S"
     maze[size - 2][size - 2] = "E"
     maze[size - 2][size - 1] = " "
-    return ["".join(row) for row in maze]
+    return ["".join(SYMBOLS[char] for char in row) for row in maze]
     #The E and S are the start and end points of the maze for internal logic, rendered as blank spaces for the output
 
-GREEN = "\033[32m"
-RESET = "\033[0m"
- 
-symbols = {
-    "#": "[]",
-    " ": "  ",
-    "S": "  ",
-    "E": "  ",
-}
 
-temp = generate_maze(20)
-for row in temp:
-    print("".join(symbols[c] for c in row))
+
+
+
+
+
+if __name__ == "__main__":
+    temp = generate_maze(20)
+    for row in temp:
+        print(row)
+
+
 
 
 
