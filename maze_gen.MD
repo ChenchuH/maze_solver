@@ -1,3 +1,6 @@
+DFS Maze generator that creates a perfect maze with one solution.
+
+
 1. Input a size.
 
 2. If size is even, add 1.
