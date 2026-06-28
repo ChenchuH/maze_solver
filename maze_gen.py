@@ -38,7 +38,7 @@ def generate_maze(size):
     
     carve_path(1, 1)
     add_loops(maze, size // 2)
-    
+
     maze[1][0] = " "
     maze[1][1] = "S"
     maze[size - 2][size - 2] = "E"
@@ -50,7 +50,7 @@ GREEN = "\033[32m"
 RESET = "\033[0m"
  
 symbols = {
-    "#": f"{GREEN}[]{RESET}",
+    "#": "[]",
     " ": "  ",
     "S": "  ",
     "E": "  ",

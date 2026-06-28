@@ -1,4 +1,4 @@
-DFS Maze generator that creates a perfect maze with one solution.
+DFS Maze generator that creates a perfect maze with one solution, then randomlly destroys interior walls to create possible routes and branches. 
 
 
 1. Input a size.
